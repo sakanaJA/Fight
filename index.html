@@ -1,38 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Puzzle Slide</title>
-  <style>
-    #puzzle-container {
-      width: 80%;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 5px;
-      margin: 0 auto;
-    }
-
-    .puzzle-block {
-      background: #66cdaa;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2em;
-    }
-
-    #timer {
-      font-size: 1.5em;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>これから何しようか</title>
+    <link rel="icon" type="image/x-icon" href="haku.png" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>たのしいよね？</h1>
-  <p id="timer">Time: 0 seconds</p>
-  <div id="puzzle-container"></div>
-
-  <script src="app.js"></script>
-  
+  <h2>これから何しようか</H2>
+    <div class="game-area">
+        <button class="balloon" onclick="popBalloon(this)"></button>
+        <button class="balloon" onclick="popBalloon(this)"></button>
+        <button class="balloon" onclick="popBalloon(this)"></button>
+        <!-- ... 任意の数の風船を追加 ... -->
+    </div>
+    <div class="message-input-area">
+      <input type="text" id="customMessage" placeholder="やることを入力">
+      <button onclick="addCustomMessage()" class="add-button">追加</button>
+  </div>  
+    <p id="message"></p>
+    <script src="script.js"></script>
 </body>
 </html>
